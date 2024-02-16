@@ -1,0 +1,22 @@
+.clr1 {
+    background-color: steelblue;
+}
+
+body {
+    background-image: repeating-linear-gradient(135deg, rgba(106, 106, 106, 0.1) 0px, rgba(106, 106, 106, 0.1) 2px,
+    transparent 2px, transparent 4px), linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
+}
+
+.verti {
+    height: 100vh;
+}
+
+img {
+    width: 75%;
+    min-width: 120px;
+}
+
+.pad-acc {
+    padding-top: calc(9vh + 40px);
+    padding-bottom: calc(18vh + 20px);
+}

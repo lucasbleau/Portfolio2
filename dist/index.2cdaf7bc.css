@@ -1,0 +1,23 @@
+.clr1 {
+  background-color: #4682b4;
+}
+
+body {
+  background-image: repeating-linear-gradient(135deg, #6a6a6a1a 0 2px, #0000 2px 4px), linear-gradient(90deg, #fff, #fff);
+}
+
+.verti {
+  height: 100vh;
+}
+
+img {
+  width: 75%;
+  min-width: 120px;
+}
+
+.pad-acc {
+  padding-top: calc(9vh + 40px);
+  padding-bottom: calc(18vh + 20px);
+}
+
+/*# sourceMappingURL=index.2cdaf7bc.css.map */
