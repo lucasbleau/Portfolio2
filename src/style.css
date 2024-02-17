@@ -8,7 +8,7 @@ body {
 }
 
 .verti {
-    height: 100vh;
+    height: 100%;
 }
 
 img {
@@ -17,6 +17,33 @@ img {
 }
 
 .pad-acc {
-    padding-top: calc(9vh + 40px);
-    padding-bottom: calc(18vh + 20px);
+    padding-top: 20vh;
+}
+
+@media only screen and (min-width: 992px) {
+    .container {
+        padding-top: 18vh;
+        padding-bottom: 14vh;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px){
+    .container {
+        padding-top: 20vh;
+        padding-bottom: 22vh;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px){
+    .container {
+        padding-top: 22vh;
+        padding-bottom: 24vh;
+    }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 576px){
+    .container {
+        padding-top: 25vh;
+        padding-bottom: 32vh;
+    }
 }
