@@ -32,6 +32,23 @@ img {
   .accordion {
     padding-bottom: 20vh;
   }
+
+  .passions {
+    padding-top: 8vh;
+    padding-bottom: 10vh;
+  }
+}
+
+@media only screen and (width >= 880px) and (width <= 992px) {
+  .passions {
+    padding-top: 12vh;
+  }
+}
+
+@media only screen and (width >= 768px) and (width <= 880px) {
+  .passions {
+    padding-top: 14vh;
+  }
 }
 
 @media only screen and (width >= 768px) and (width <= 992px) {
@@ -54,6 +71,10 @@ img {
   .accordion {
     padding-bottom: 28vh;
   }
+
+  .passions {
+    padding-top: 17vh;
+  }
 }
 
 @media only screen and (width >= 200px) and (width <= 576px) {
@@ -65,6 +86,65 @@ img {
   .accordion {
     padding-bottom: 28vh;
   }
+
+  .passions {
+    padding-top: 10vh;
+  }
+
+  .passions > .row2 {
+    margin-bottom: 25vh;
+  }
+}
+
+.hovereffect {
+  float: left;
+  text-align: center;
+  cursor: default;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hovereffect .overlay {
+  opacity: 0;
+  background-color: #00000080;
+  width: 100%;
+  height: 100%;
+  transition: all .4s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.hovereffect img {
+  transition: all .4s linear;
+  display: block;
+  position: relative;
+}
+
+.hovereffect h2 {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  background: #0009;
+  padding: 10px;
+  font-size: 17px;
+  transition: all .2s ease-in-out;
+  position: relative;
+  transform: translateY(-100px);
+}
+
+.hovereffect:hover .overlay {
+  opacity: 1;
+  filter: alpha(opacity= 100);
+}
+
+.hovereffect:hover h2, .hovereffect:hover a.info {
+  opacity: 1;
+  filter: alpha(opacity= 100);
+  transform: translateY(0);
 }
 
 /*# sourceMappingURL=index.2cdaf7bc.css.map */
