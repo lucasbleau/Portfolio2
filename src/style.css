@@ -20,10 +20,17 @@ img {
     padding-top: 20vh;
 }
 
+.pad-pre {
+    padding-top: 10vh;
+}
+
 @media only screen and (min-width: 992px) {
-    .container {
+    .container .accordion{
         padding-top: 18vh;
         padding-bottom: 14vh;
+    }
+    .accordion {
+        padding-bottom: 20vh;
     }
 }
 
@@ -32,6 +39,9 @@ img {
         padding-top: 20vh;
         padding-bottom: 22vh;
     }
+    .accordion {
+        padding-bottom: 27vh;
+    }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 768px){
@@ -39,11 +49,17 @@ img {
         padding-top: 22vh;
         padding-bottom: 24vh;
     }
+    .accordion {
+        padding-bottom: 28vh;
+    }
 }
 
 @media only screen and (min-width: 200px) and (max-width: 576px){
     .container {
         padding-top: 25vh;
         padding-bottom: 32vh;
+    }
+    .accordion {
+        padding-bottom: 28vh;
     }
 }
