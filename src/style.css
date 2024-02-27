@@ -2,6 +2,10 @@
     background-color: steelblue;
 }
 
+.txt-clr1 {
+    color: steelblue;
+}
+
 body {
     background-image: repeating-linear-gradient(135deg, rgba(106, 106, 106, 0.1) 0px, rgba(106, 106, 106, 0.1) 2px,
     transparent 2px, transparent 4px), linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
@@ -24,9 +28,9 @@ img {
     padding-top: 10vh;
 }
 
-/*.pad-pass {*/
-/*    padding-bottom: 10vh;*/
-/*}*/
+.pad-VT {
+    padding-top: 4vh;
+}
 
 @media only screen and (min-width: 992px) {
     .container .accordion {
@@ -60,7 +64,11 @@ img {
         padding-bottom: 22vh;
     }
     .accordion {
-        padding-bottom: 27vh;
+        padding-bottom: 22vh;
+    }
+    .pad-VT {
+        padding-top: 6vh;
+        padding-bottom: 24vh;
     }
 }
 
@@ -70,10 +78,14 @@ img {
         padding-bottom: 24vh;
     }
     .accordion {
-        padding-bottom: 28vh;
+        padding-bottom: 24vh;
     }
     .passions {
         padding-top: 17vh;
+    }
+    .pad-VT {
+        padding-top: 6vh;
+        padding-bottom: 24vh;
     }
 }
 
@@ -90,6 +102,10 @@ img {
     }
     .passions > .row2 {
         margin-bottom: 25vh;
+    }
+    .pad-VT {
+        padding-top: 1vh;
+        padding-bottom: 24vh;
     }
 }
 

@@ -2,6 +2,10 @@
   background-color: #4682b4;
 }
 
+.txt-clr1 {
+  color: #4682b4;
+}
+
 body {
   background-image: repeating-linear-gradient(135deg, #6a6a6a1a 0 2px, #0000 2px 4px), linear-gradient(90deg, #fff, #fff);
 }
@@ -21,6 +25,10 @@ img {
 
 .pad-pre {
   padding-top: 10vh;
+}
+
+.pad-VT {
+  padding-top: 4vh;
 }
 
 @media only screen and (width >= 992px) {
@@ -58,7 +66,12 @@ img {
   }
 
   .accordion {
-    padding-bottom: 27vh;
+    padding-bottom: 22vh;
+  }
+
+  .pad-VT {
+    padding-top: 6vh;
+    padding-bottom: 24vh;
   }
 }
 
@@ -69,11 +82,16 @@ img {
   }
 
   .accordion {
-    padding-bottom: 28vh;
+    padding-bottom: 24vh;
   }
 
   .passions {
     padding-top: 17vh;
+  }
+
+  .pad-VT {
+    padding-top: 6vh;
+    padding-bottom: 24vh;
   }
 }
 
@@ -93,6 +111,11 @@ img {
 
   .passions > .row2 {
     margin-bottom: 25vh;
+  }
+
+  .pad-VT {
+    padding-top: 1vh;
+    padding-bottom: 24vh;
   }
 }
 
