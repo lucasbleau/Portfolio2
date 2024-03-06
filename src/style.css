@@ -15,100 +15,26 @@ body {
     min-height: 100vh;
 }
 
-img {
-    width: 75%;
+.min-with-img {
+    min-width: 130px;
+}
+
+/*#omg-portfolio{*/
+/*    background-image: url("../photo/portfolioCapture.png");*/
+/*    background-size: cover;*/
+/*}*/
+
+.cardimg {
+    height: 170px;
+    object-fit: cover;
+}
+
+.img2 {
+    width: 100%;
     min-width: 120px;
 }
 
-/*@media only screen and (min-width: 992px) {*/
-/*    .R-accueil {*/
-/*        padding-top: calc(10vh + 5%);*/
-/*    }*/
-/*    .R-presentation {*/
-/*        padding-top: 15%;*/
-/*    }*/
-/*    .R-veille {*/
-/*        padding-top: 12%;*/
-/*    }*/
-
-/*}*/
-
-/*@media only screen and (min-width: 880px) and (max-width: 992px){*/
-/*    .passions {*/
-/*        padding-top: 12vh;*/
-/*    }*/
-/*}*/
-
-/*@media only screen and (min-width: 768px) and (max-width: 880px){*/
-/*    .passions {*/
-/*        padding-top: 14vh;*/
-/*    }*/
-/*}*/
-
-/*@media only screen and (min-width: 768px) and (max-width: 992px){*/
-/*    .R-accueil {*/
-/*        padding-top: 15%;*/
-/*        padding-bottom: 20%;*/
-/*    }*/
-/*    .R-presentation {*/
-/*        padding-top: 25%;*/
-/*        padding-bottom: 100%;*/
-/*    }*/
-/*    .R-veille {*/
-/*        padding-top: 15%;*/
-/*    }*/
-/*}*/
-
-/*@media only screen and (min-width: 576px) and (max-width: 768px){*/
-/*    .R-accueil {*/
-/*        padding-top: 18%;*/
-/*        padding-bottom: 120%;*/
-/*    }*/
-/*    .R-presentation {*/
-/*        padding-top: 32%;*/
-/*        padding-bottom: 115%;*/
-/*    }*/
-/*    .R-veille {*/
-/*        padding-top: 16%;*/
-/*        padding-bottom: 135%;*/
-/*    }*/
-/*}*/
-
-/*@media only screen and (min-width: 460px) and (max-width: 576px){*/
-/*    .R-accueil {*/
-/*        padding-top: 30%;*/
-/*        padding-bottom: 180%;*/
-/*    }*/
-/*    .R-presentation {*/
-/*        padding-top: 43%;*/
-/*        padding-bottom: 160%;*/
-/*    }*/
-/*    .R-veille {*/
-/*        padding-top: 15%;*/
-/*    }*/
-/*}*/
-
-/*@media only screen and (min-width: 370px) and (max-width: 460px) {*/
-/*    .R-accueil {*/
-/*        padding-top: 35%;*/
-/*        padding-bottom: 250%;*/
-/*    }*/
-/*    .R-presentation {*/
-/*        padding-top: 50%;*/
-/*        padding-bottom: 240%;*/
-/*    }*/
-/*}*/
-
-/*@media only screen and (min-width: 250px) and (max-width: 370px) {*/
-/*    .R-accueil {*/
-/*        padding-top: 35%;*/
-/*        padding-bottom: 330%;*/
-/*    }*/
-/*    .R-presentation {*/
-/*        padding-top: 60%;*/
-/*        padding-bottom: 350%;*/
-/*    }*/
-/*}*/
+/*HOVER EFFECT PASSION*/
 
 .hovereffect {
     width:100%;
