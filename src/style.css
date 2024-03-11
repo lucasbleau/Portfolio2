@@ -2,8 +2,21 @@
     background-color: steelblue;
 }
 
+.clr1-hover:hover {
+    border: steelblue 1px solid;
+    color: steelblue;
+}
+
+.clr2-txt {
+    color: white;
+}
+
 .txt-clr1 {
     color: steelblue;
+}
+
+.card-height {
+    min-height: 300px;
 }
 
 body {
