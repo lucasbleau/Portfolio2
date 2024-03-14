@@ -4,7 +4,7 @@
   "description": "",
   "source": "src/index.html",
   "scripts": {
-    "start": "parcel src/index.html",
+    "start": "parcel index.php",
     "build": "parcel build --dist-dir public --public-url ./"
   },
   "keywords": [],
