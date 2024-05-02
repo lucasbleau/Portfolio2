@@ -1,3 +1,7 @@
+<?php
+session_start()
+?>
+
 
 <!doctype html>
 <html lang="en">
@@ -51,6 +55,18 @@
     </nav>
 
     <!--FIN NAVBAR-->
+
+    <?php
+
+    if (isset($_SESSION['success_message'])) {
+
+        ?>
+        <p class="alert alert-success m-3"> <?= $_SESSION['success_message'] ?></p>
+        <?php
+        unset($_SESSION['success_message']);
+    }
+
+    ?>
 
     <div class="container d-flex justify-content-center align-items-center my-5">
         <div class="row row-cols-md-1 m-0 justify-content-center align-items-center h-100">
@@ -121,7 +137,14 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
 </script>
-
+<script>
+    // Fonction pour masquer le message de succès après un délai spécifié
+    setTimeout(function() {
+        document.querySelectorAll('.alert-success').forEach(function(element) {
+            element.style.display = 'none';
+        });
+    }, 3000); // 3000 millisecondes équivalent à 3 secondes
+</script>
 
 <!--FIN SCRIPT-->
 

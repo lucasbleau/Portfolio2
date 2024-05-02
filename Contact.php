@@ -38,18 +38,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         }
     }
 
+    if (empty($_POST["ville"]))
+    {
+        $erreurs["ville"] = "Le ville est obligatoire !";
+    } else {
+        $ville = $_POST["ville"];
+    }
+
     if (empty($_POST["message"]))
     {
         $erreurs["message"] = "Le message est obligatoire !";
     } else {
         $message = $_POST["message"];
-    }
-
-    if (!$_POST['check'])
-    {
-        $erreurs['check'] = "cochez la case !";
-    } else {
-        $check = $_POST["check"];
     }
 
     if (empty($erreurs))
@@ -62,8 +62,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
         // Si pas d'erreur
         if (empty($erreurs)) {
-            $_SESSION['success'] = true;
-            header("Location: index.html");
+            $_SESSION['success_message'] = "Le message a été soumis avec succès !";
+            header("Location: index.php");
             exit();
         }
     }
@@ -100,7 +100,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             <div class="collapse navbar-collapse flex-grow-0" id="navbarTogglerDemo03">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
                     <li class="nav-item mx-3 d-flex align-items-center justify-content-center rounded-2">
-                        <a class="nav-link px-3 my-auto text-light text-center" href="index.html">Accueil</a>
+                        <a class="nav-link px-3 my-auto text-light text-center" href="index.php">Accueil</a>
                     </li>
                     <li class="nav-item mx-3 d-flex align-items-center justify-content-center rounded-2">
                         <a class="nav-link px-3 my-auto text-light text-center" href="presentation.html">Présentation</a>
@@ -132,120 +132,125 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             <form class="row g-3 needs-validation" novalidate method="post">
 
                 <div class=" col-12 col-md-6">
+
                     <?php
-                    if (!empty($erreurs["prenom"]))
-                    {
-                        $prenom = "";
-                    }
+                        if (!empty($erreurs["prenom"]))
+                        {
+                            $prenom = "";
+                        }
                     ?>
+
                     <label for="validationCustom01" class="form-label">Prénom</label>
-                    <input type="text" class="form-control" id="validationCustom01" required name="prenom" value="<?php $prenom ?>">
+                    <input type="text" class="form-control" id="validationCustom01" required name="prenom" value="<?= $prenom ?>"
                     <?php
                     if (!empty($erreurs["prenom"]))
                     {
                         ?>
-                            <p class="erreur"><?= $erreurs["prenom"]?></p>
+                        placeholder="<?= $erreurs["prenom"]?>"
                         <?php
                     }
                     ?>
+                    >
+
+
+
                 </div>
 
                 <div class="col-12 col-md-6">
+
                     <?php
-                    if (!empty($erreurs["nom"]))
-                    {
-                        $nom = "";
-                    }
+                        if (!empty($erreurs["nom"]))
+                        {
+                            $nom = "";
+                        }
                     ?>
+
                     <label for="validationCustom02" class="form-label">Nom</label>
-                    <input type="text" class="form-control" id="validationCustom02" required name="nom" value="<?php $nom ?>">
+                    <input type="text" class="form-control" id="validationCustom02" required name="nom" value="<?= $nom ?>"
                     <?php
                     if (!empty($erreurs["nom"]))
                     {
                         ?>
-                        <p class="erreur"><?= $erreurs["nom"]?></p>
+                        placeholder="<?= $erreurs["nom"]?>"
                         <?php
                     }
                     ?>
+                    >
+
                 </div>
 
                 <div class="col-md-6">
+
+                    <?php
+                        if (!empty($erreurs["email"]))
+                        {
+                            $email = "";
+                        }
+                    ?>
+
+                    <label for="validationCustomUsername" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required name="email" value="<?= $email ?>"
                     <?php
                     if (!empty($erreurs["email"]))
                     {
-                        $email = "";
+                        ?>
+                        placeholder="<?= $erreurs["email"]?>"
+                        <?php
                     }
                     ?>
-                    <label for="validationCustomUsername" class="form-label">Email</label>
-                    <div class="input-group has-validation">
-                        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required name="email" value="<?php $email ?>">
-                        <?php
-                        if (!empty($erreurs["email"]))
-                        {
-                            ?>
-                            <p class="erreur"><?= $erreurs["email"]?></p>
-                            <?php
-                        }
-                        ?>
-                    </div>
+                    >
+
                 </div>
 
                 <div class="col-md-6">
+
                     <?php
-                    if (!empty($erreurs["ville"]))
-                    {
-                        $ville = "";
-                    }
+                        if (!empty($erreurs["ville"]))
+                        {
+                            $ville = "";
+                        }
                     ?>
+
                     <label for="validationCustom03" class="form-label">Ville</label>
-                    <input type="text" class="form-control" id="validationCustom03" required name="ville" value="<?php $ville ?>">
+                    <input type="text" class="form-control" id="validationCustom03" required name="ville" value="<?= $ville ?>"
                     <?php
                     if (!empty($erreurs["ville"]))
                     {
                         ?>
-                        <p class="erreur"><?= $erreurs["ville"]?></p>
+                        placeholder="<?= $erreurs["ville"]?>"
                         <?php
                     }
                     ?>
+                    >
+
                 </div>
 
                 <div class="col-12">
+
                     <?php
-                    if (!empty($erreurs["message"]))
-                    {
-                        $message = "";
-                    }
+                        if (!empty($erreurs["message"]))
+                        {
+                            $message = "";
+                        }
                     ?>
+
                     <label for="validationCustom04" class="form-label">Message</label>
-                    <textarea type="text" class="form-control" id="validationCustom04" rows="4" required name="message"></textarea>
+                    <textarea type="text" class="form-control" id="validationCustom04" rows="4" required name="message"
                     <?php
                     if (!empty($erreurs["message"]))
                     {
                         ?>
-                        <p class="erreur"><?= $erreurs["message"]?></p>
+                        placeholder="<?= $erreurs["message"]?>"
                         <?php
                     }
                     ?>
+                    ><?= $message ?></textarea>
+
+
                 </div>
 
                 <div class="col-12 d-flex justify-content-center">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="invalidCheck" required name="check" <?php $check ?>>
-                        <label class="form-check-label" for="invalidCheck">
-                            J'accepte que mon email soit réutilisé
-                        </label>
-                    </div>
-                    <?php
-                    if (!empty($erreurs["check"]))
-                    {
-                        ?>
-                        <p class="erreur"><?= $erreurs["check"]?></p>
-                        <?php
-                    }
-                    ?>
-                </div>
-                <div class="col-12 d-flex justify-content-center">
-                    <button class="btn btn-primary m-2" type="submit">Envoyer</button>
+                    <button class="btn btn-primary m-5 px-5" type="submit">Envoyer</button>
                 </div>
             </form>
         </div>
